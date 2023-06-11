@@ -1,29 +1,33 @@
 <script>
-
+  import arrowLeft from "../../static/address-bar/arrow-left.svg"
+  import arrowRight from "../../static/address-bar/arrow-right.svg"
+  import home from "../../static/address-bar/home.svg"
 </script>
 
 <main class="address-container">
   <div class="icon-container">
-    <img class="button-icon" alt="Left" src="./address-bar/arrow-left.svg"/>
-    <img class="button-icon" alt="Right" src="./address-bar/arrow-right.svg"/>
-    <img class="button-icon" alt="Home" src="./address-bar/home.svg"/>
+    <img class="button-icon" alt="Left" src={arrowLeft}/>
+    <img class="button-icon" alt="Right" src={arrowRight}/>
+    <img class="button-icon" alt="Home" src={home}/>
   </div>
   <input class="address-input">
 </main>
 
 <style>
   .button-icon {
-    margin-left: 4px;
+    margin-left: 6px;
   }
 
   .icon-container {
     display: flex;
     justify-content: flex-start;
-    margin-right: 8px
+    margin-right: 24px;
+
+    width: 90px;
   }
 
   .address-input {
-    width: 100%;
+    width: 72.3vw;
     height: 32px;
     border: none;
     border-radius: 5px;
@@ -43,7 +47,7 @@
   .address-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
 
     align-items: center;
     width: 100%;
