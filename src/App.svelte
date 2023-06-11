@@ -3,7 +3,7 @@
   import SideBar from "./lib/components/SideBar.svelte";
 </script>
 
-<main class="container">
+<main class="app-container">
   <AddressBar/>
   <SideBar>
 
@@ -11,6 +11,18 @@
 </main>
 
 <style>
+  .content-container {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: center;
+    border: #0f0f0f 2px solid;
+
+    margin-top: 6px;
+
+    height: 90vh;
+    width: 10vw;
+  }
+
   /*.logo.vite:hover {*/
   /*  filter: drop-shadow(0 0 2em #747bff);*/
   /*}*/
