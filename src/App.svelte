@@ -1,25 +1,25 @@
 <script lang="ts">
-  import AddressBar from "./lib/components/AddressBar.svelte";
-  import SideBar from "./lib/components/SideBar.svelte";
+  import TopBar from "./lib/components/topbar/TopBar.svelte";
 </script>
 
 <main class="app-container">
-  <AddressBar/>
-  <SideBar>
-
-  </SideBar>
+  <TopBar/>
+  <div class="content-container">
+    <!--    <SideBar/>-->
+  </div>
 </main>
 
 <style>
   .content-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     justify-self: center;
     border: #0f0f0f 2px solid;
 
     margin-top: 6px;
+    margin-left: 8px;
 
-    height: 90vh;
+    height: 86vh;
     width: 10vw;
   }
 
