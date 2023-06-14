@@ -23,6 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# 프로젝트 제외 경로
+# Project Exclude Path
 /src/main.js
 /src/main.js.map
+
+**/*.js
+**/*.js.map
