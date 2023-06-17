@@ -29,3 +29,7 @@ dist-ssr
 
 **/*.js
 **/*.js.map
+
+tsconfig.node.tsbuildinfo
+vite.config.d.ts
+vite.config.js
