@@ -6,15 +6,15 @@
 
 <main>
   <div class="icon-container" data-tauri-drag-region>
-    <img class="button-icon" alt="Left" src={arrowLeft}/>
-    <img class="button-icon" alt="Right" src={arrowRight}/>
-    <img class="button-icon" alt="Home" src={home}/>
+    <img alt="Left" class="button-icon" src={arrowLeft}/>
+    <img alt="Right" class="button-icon" src={arrowRight}/>
+    <img alt="Home" class="button-icon" src={home}/>
   </div>
 </main>
 
 <style>
   .button-icon {
-    margin-left: 6px;
+    margin-left: 8px;
   }
 
   .icon-container {
@@ -23,6 +23,6 @@
     margin-right: 24px;
 
     width: 90px;
-    margin-left: 8px;
+    margin-left: 4px;
   }
 </style>

@@ -3,7 +3,7 @@
 </script>
 
 <main class="address-container">
-  <input class="address-input" bind:value={currentPath} on:input={() => console.log(currentPath)}>
+  <input bind:value={currentPath} class="address-input" on:input={() => console.log(currentPath)}>
 </main>
 
 <style>
