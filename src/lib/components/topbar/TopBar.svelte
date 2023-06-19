@@ -16,7 +16,7 @@
   .top-bar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     justify-items: center;
     align-items: center;
     width: 100%;
