@@ -1,23 +1,7 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
   import TopBar from "./lib/components/topbar/TopBar.svelte"
   import SideBar from "./lib/components/sidebar/SideBar.svelte"
   import ContextMenu from "./lib/components/contextmenu/ContextMenu.svelte"
-
-  let contextmenu
-  onMount(() => {
-    // disable default context menu and replace custom context menu
-    document.addEventListener("contextmenu", event => {
-      event.preventDefault()
-
-      const {clientY, clientX} = event
-
-      contextmenu.style.top = `${clientY}px`
-      contextmenu.style.left = `${clientX}px`
-
-      contextmenu.classList.add("visible")
-    })
-  })
 </script>
 
 <main class="app-container">
@@ -28,10 +12,10 @@
     </div>
     <div class="filelist-container">
       <div>
-
+        Files
       </div>
     </div>
-    <ContextMenu bind:this={contextmenu}/>
+    <ContextMenu/>
   </div>
 </main>
 
