@@ -16,6 +16,9 @@
   .button-icon {
     margin-left: 8px;
     border-radius: 25%;
+
+    /* prevent unexpected drag icon */
+    -webkit-user-drag: none;
   }
 
   .button-icon:hover {
