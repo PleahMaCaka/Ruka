@@ -1,12 +1,14 @@
 <script>
   import TopBarButtons from "./TopBarButtons.svelte";
   import TopBarInput from "./TopBarInput.svelte";
+  import WindowControlButtons from "./TopBarWindowControl.svelte";
 </script>
 
 <main>
-  <div class="top-bar drag-region" data-tauri-drag-region>
+  <div class="top-bar input-drag-region" data-tauri-drag-region>
     <TopBarButtons/>
     <TopBarInput/>
+    <WindowControlButtons/>
   </div>
 </main>
 
@@ -20,7 +22,7 @@
     width: 100%;
   }
 
-  .drag-region {
+  .input-drag-region {
     width: 100%;
     height: 40px;
     background-color: #0f0f0f;

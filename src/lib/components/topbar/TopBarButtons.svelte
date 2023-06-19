@@ -1,14 +1,15 @@
 <script>
-  import arrowLeft from "../../../static/address-bar/arrow-left.svg";
-  import arrowRight from "../../../static/address-bar/arrow-right.svg";
-  import home from "../../../static/address-bar/home.svg";
+  import arrowLeft from "../../../static/address-bar/arrow-left.svg"
+  import arrowRight from "../../../static/address-bar/arrow-right.svg"
+  import home from "../../../static/address-bar/home.svg"
+  import "../../../styles/highlight.css"
 </script>
 
 <main>
   <div class="icon-container" data-tauri-drag-region>
-    <img alt="Left" class="button-icon" src={arrowLeft}/>
-    <img alt="Right" class="button-icon" src={arrowRight}/>
-    <img alt="Home" class="button-icon" src={home}/>
+    <img alt="Left" class="button-icon highlight" src={arrowLeft}/>
+    <img alt="Right" class="button-icon highlight" src={arrowRight}/>
+    <img alt="Home" class="button-icon highlight" src={home}/>
   </div>
 </main>
 
@@ -19,16 +20,6 @@
 
     /* prevent unexpected drag icon */
     -webkit-user-drag: none;
-  }
-
-  .button-icon:hover {
-    transition: 0.07s ease-in-out;
-    background-color: rgba(221, 187, 221, 0.45);
-  }
-
-  .button-icon:active {
-    transition: 0.07s ease-in-out;
-    background-color: rgba(221, 187, 221, 0.75);
   }
 
   .icon-container {

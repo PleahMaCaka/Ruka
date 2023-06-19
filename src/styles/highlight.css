@@ -1,0 +1,9 @@
+.highlight:hover {
+  transition: 0.13s;
+  background-color: rgba(221, 187, 221, 0.45);
+}
+
+.highlight:active {
+  transition: 0.07s ease-in-out;
+  background-color: rgba(221, 187, 221, 0.75);
+}
