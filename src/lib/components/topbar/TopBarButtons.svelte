@@ -15,6 +15,17 @@
 <style>
   .button-icon {
     margin-left: 8px;
+    border-radius: 25%;
+  }
+
+  .button-icon:hover {
+    transition: 0.07s ease-in-out;
+    background-color: rgba(221, 187, 221, 0.45);
+  }
+
+  .button-icon:active {
+    transition: 0.07s ease-in-out;
+    background-color: rgba(221, 187, 221, 0.75);
   }
 
   .icon-container {

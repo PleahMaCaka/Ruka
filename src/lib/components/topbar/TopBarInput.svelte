@@ -2,8 +2,11 @@
   let currentPath = ""
 </script>
 
-<main class="address-container">
-  <input bind:value={currentPath} class="address-input" on:input={() => console.log(currentPath)}>
+<main class="address-container" data-tauri-drag-region>
+  <input
+    class="address-input"
+    bind:value={currentPath}
+  />
 </main>
 
 <style>
