@@ -23,9 +23,7 @@
   .icon-container {
     display: flex;
     justify-content: flex-start;
-    margin-right: 24px;
-
-    width: 90px;
+    margin-right: 32px;
     margin-left: 4px;
   }
 </style>

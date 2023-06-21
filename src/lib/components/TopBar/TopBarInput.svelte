@@ -11,7 +11,7 @@
 
 <style>
   .address-input {
-    width: 72.3vw;
+    width: 70vw;
     height: 24px;
     border: rgba(169, 169, 169, 0.1) 1px solid;
     border-radius: 5px;

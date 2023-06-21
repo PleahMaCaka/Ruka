@@ -55,7 +55,8 @@
     width: 100px;
     height: 28px;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 8px;
+    justify-content: flex-start;
+    margin-right: 4px;
+    margin-left: 32px;
   }
 </style>
