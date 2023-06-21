@@ -1,7 +1,7 @@
 <script lang="ts">
-  import TopBar from "./lib/components/topbar/TopBar.svelte"
-  import SideBar from "./lib/components/sidebar/SideBar.svelte"
-  import ContextMenu from "./lib/components/contextmenu/ContextMenu.svelte"
+  import TopBar from "./lib/components/TopBar/TopBar.svelte"
+  import SideBar from "./lib/components/SideBar/SideBar.svelte"
+  import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte"
 </script>
 
 <main class="app-container">
