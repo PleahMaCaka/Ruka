@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import closeIcon from "../../../static/topbar/close.svg"
   import minimizeIcon from "../../../static/topbar/minimize.svg"
   import maximizeIcon from "../../../static/topbar/maximize.svg"
   import "../../../styles/highlight.css"
-  import {appWindow} from "@tauri-apps/api/window"
-  import {onMount} from "svelte"
+  import { appWindow } from "@tauri-apps/api/window"
+  import { onMount } from "svelte"
 
   onMount(() => {
     document.getElementById("min-btn").addEventListener("click", () => appWindow.minimize())
@@ -12,7 +12,8 @@
     document.getElementById("close-btn").addEventListener("click", () => appWindow.close())
   })
 </script>
-<main class="window-control">
+
+<div class="window-control">
   <button class="control-btn highlight">
     <img alt="Minimize" src={minimizeIcon} id="min-btn">
   </button>
@@ -22,7 +23,8 @@
   <button class="control-btn highlight">
     <img alt="Close" src={closeIcon} id="close-btn">
   </button>
-</main>
+</div>
+
 <style>
   #min-btn {
     width: 18px;

@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
   import settingIcon from '../../../static/sidebar/setting.svg'
 </script>
-<main class="setting-container">
+
+<div class="setting-container">
   <div class="setting-btn">
     <img
       alt="Settings"
@@ -9,11 +10,9 @@
       class="setting-icon"
     />
   </div>
-</main>
+</div>
+
 <style>
-  /*
-  퇴근하고 
-  */
   .setting-icon {
     opacity: 0.8;
     position: absolute;
@@ -30,5 +29,4 @@
     height: 36px;
     border-radius: 25%;
   }
-
 </style>

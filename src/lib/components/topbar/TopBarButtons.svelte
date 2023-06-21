@@ -1,17 +1,15 @@
-<script>
+<script lang="ts">
   import arrowLeft from "../../../static/address-bar/arrow-left.svg"
   import arrowRight from "../../../static/address-bar/arrow-right.svg"
   import home from "../../../static/address-bar/home.svg"
   import "../../../styles/highlight.css"
 </script>
 
-<main>
-  <div class="icon-container" data-tauri-drag-region>
-    <img alt="Left" class="button-icon highlight" src={arrowLeft}/>
-    <img alt="Right" class="button-icon highlight" src={arrowRight}/>
-    <img alt="Home" class="button-icon highlight" src={home}/>
-  </div>
-</main>
+<div class="icon-container" data-tauri-drag-region>
+  <img alt="Left" class="button-icon highlight" src={arrowLeft}/>
+  <img alt="Right" class="button-icon highlight" src={arrowRight}/>
+  <img alt="Home" class="button-icon highlight" src={home}/>
+</div>
 
 <style>
   .button-icon {

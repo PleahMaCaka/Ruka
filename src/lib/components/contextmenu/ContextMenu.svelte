@@ -1,5 +1,5 @@
-<script>
-  import {onDestroy, onMount} from 'svelte'
+<script lang="ts">
+  import { onDestroy, onMount } from 'svelte'
 
   let contextmenu
 
@@ -29,11 +29,9 @@
   })
 </script>
 
-<main>
-  <div id="contextmenu" class="contextmenu">
-    Options here!
-  </div>
-</main>
+<div id="contextmenu" class="contextmenu">
+  Options here!
+</div>
 
 <style>
   #contextmenu {
@@ -50,7 +48,8 @@
 
     border: 1px solid rgba(208, 204, 204, 0.68);
 
-    animation: open-context 0.2s ease-in-out;
+    /*TODO pretty animation*/
+    /*animation: open-context 0.2s ease-in-out;*/
 
     transition: all 0.2s ease-in-out;
   }

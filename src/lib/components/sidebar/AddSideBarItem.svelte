@@ -1,8 +1,7 @@
-<main>
-  <div class="add-sidebar-item">
-    +
-  </div>
-</main>
+<div class="add-sidebar-item">
+  +
+</div>
+
 <style>
   .add-sidebar-item {
     width: 100px;

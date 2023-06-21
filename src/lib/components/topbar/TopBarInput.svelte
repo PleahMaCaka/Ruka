@@ -1,13 +1,13 @@
-<script>
+<script lang="ts">
   let currentPath = ""
 </script>
 
-<main class="address-container" data-tauri-drag-region>
+<div class="address-container" data-tauri-drag-region>
   <input
     class="address-input"
     bind:value={currentPath}
   />
-</main>
+</div>
 
 <style>
   .address-input {

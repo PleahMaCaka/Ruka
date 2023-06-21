@@ -1,16 +1,14 @@
-<script>
-  import TopBarButtons from "./TopBarButtons.svelte";
-  import TopBarInput from "./TopBarInput.svelte";
-  import WindowControlButtons from "./TopBarWindowControl.svelte";
+<script lang="ts">
+  import TopBarButtons from "./TopBarButtons.svelte"
+  import TopBarInput from "./TopBarInput.svelte"
+  import WindowControlButtons from "./TopBarWindowControl.svelte"
 </script>
 
-<main>
-  <div class="top-bar input-drag-region" data-tauri-drag-region>
-    <TopBarButtons/>
-    <TopBarInput/>
-    <WindowControlButtons/>
-  </div>
-</main>
+<div class="top-bar input-drag-region" data-tauri-drag-region>
+  <TopBarButtons/>
+  <TopBarInput/>
+  <WindowControlButtons/>
+</div>
 
 <style>
   .top-bar {

@@ -1,6 +1,5 @@
-<main>
-  <hr class="division-line">
-</main>
+<hr class="division-line">
+
 <style>
   .division-line {
     width: 38px;
