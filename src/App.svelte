@@ -2,7 +2,13 @@
   import TopBar from "./lib/components/TopBar/TopBar.svelte"
   import SideBar from "./lib/components/SideBar/SideBar.svelte"
   import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte"
+  import rukaIcon from "./static/Ruka.png"
 </script>
+
+<svelte:head>
+  <title>Ruka File Explorer</title>
+  <link rel="icon" type="image/png" href="{rukaIcon}"/>
+</svelte:head>
 
 <main class="app-container">
   <TopBar/>
