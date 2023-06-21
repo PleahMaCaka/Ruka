@@ -11,9 +11,10 @@
   }
 
   function hideContextMenu() {
-    setTimeout(() => {
-      contextmenu.style.display = 'none'
-    }, 130) // 0.13s
+    contextmenu.style.display = 'none'
+    // setTimeout(() => {
+    //   contextmenu.style.display = 'none'
+    // }, 130) // 0.13s
   }
 
   onMount(() => {
