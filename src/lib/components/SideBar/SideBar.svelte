@@ -1,9 +1,9 @@
 <script lang="ts">
   import DivisionLine from "./DivisionLine.svelte";
-  import AddSideBarItem from "./AddSideBarItem.svelte";
+  import AddSideBarItemBtn from "./AddSideBarItemBtn.svelte";
 </script>
 
-<div class="sidebar-container">
+<div class="sidebar-contents">
   <h4 class="category">🗀 Home</h4>
   <p class="goto">Downloads</p>
   <p class="goto">Desktop</p>
@@ -13,11 +13,11 @@
   <p class="goto">Games</p>
 
   <!--  Adding SideBar Item-->
-  <AddSideBarItem/>
+  <AddSideBarItemBtn/>
 </div>
 
 <style>
-  .sidebar-container {
+  .sidebar-contents {
     display: flex;
     flex-direction: column;
     justify-self: center;
