@@ -1,0 +1,1 @@
+export type NotInited = "not-initialized-value"

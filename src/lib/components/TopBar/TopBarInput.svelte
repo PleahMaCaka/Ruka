@@ -1,11 +1,12 @@
 <script lang="ts">
-  let currentPath = ""
+  import { rukaState } from "../../stores/StateStore";
 </script>
 
 <div class="address-container" data-tauri-drag-region>
   <input
     class="address-input"
-    bind:value={currentPath}
+    bind:value={$rukaState.currentInput}
+    on:submit={$rukaState.submittedInput}
   />
 </div>
 
