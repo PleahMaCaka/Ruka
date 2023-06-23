@@ -3,6 +3,7 @@
   import SideBar from "./lib/components/SideBar/SideBar.svelte"
   import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte"
   import rukaIcon from "./static/Ruka.png"
+  import { colorPlate as color } from "./lib/stores/ColorPlate";
 </script>
 
 <svelte:head>
@@ -10,7 +11,7 @@
   <link rel="icon" type="image/png" href="{rukaIcon}"/>
 </svelte:head>
 
-<main class="app-container">
+<main class="app-container" style="--main-color: {color.main}">
   <TopBar/>
   <div class="content-container">
     <div class="sidebar-container">
@@ -36,12 +37,12 @@
     display: flex;
     justify-content: center;
     justify-self: center;
-    border: #0f0f0f 2px solid;
+    /*border remove top and else : border: var(--main-color) 1px solid; */
+    border-left: var(--main-color) 1px solid;
+    border-right: var(--main-color) 1px solid;
+    border-bottom: var(--main-color) 1px solid;
 
-    margin-top: 6px;
-    margin-left: 8px;
-
-    height: 89vh;
+    height: 92.4vh;
     width: 105px;
   }
 
