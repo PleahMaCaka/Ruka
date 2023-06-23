@@ -1,9 +1,9 @@
-name: 'build and release'
+name: 'build'
 on:
   workflow_dispatch:
     tag:
       required: false
-      default: 'Hello'
+      default: 'trigger!'
       type: string
   push:
     branches:
