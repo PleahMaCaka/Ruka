@@ -2,9 +2,14 @@
   import TopBarButtons from "./TopBarButtons.svelte"
   import TopBarInput from "./TopBarInput.svelte"
   import WindowControlButtons from "./TopBarWindowControl.svelte"
+  import { rukaConfig } from "../../stores/ConfigStore";
 </script>
 
-<div class="top-bar input-drag-region" data-tauri-drag-region>
+<div
+  data-tauri-drag-region
+  class="top-bar input-drag-region"
+  style="--topbar-size: {$rukaConfig.ui.topbar.height}"
+>
   <TopBarButtons/>
   <TopBarInput/>
   <WindowControlButtons/>
@@ -21,7 +26,7 @@
 
   .input-drag-region {
     width: 100%;
-    height: 40px;
+    height: var(--topbar-size);
     background-color: #0f0f0f;
     box-shadow: 0 0 0 1px rgba(221, 187, 221, 0.45) inset;
   }

@@ -4,6 +4,7 @@
   import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte"
   import rukaIcon from "./static/Ruka.png"
   import { colorPlate as color } from "./lib/stores/ColorPlate";
+  import { rukaConfig } from "./lib/stores/ConfigStore";
 </script>
 
 <svelte:head>
@@ -11,10 +12,10 @@
   <link rel="icon" type="image/png" href="{rukaIcon}"/>
 </svelte:head>
 
-<main class="app-container" style="--main-color: {color.main}">
+<main class="app-container" style="--main-color: {color.main};">
   <TopBar/>
   <div class="content-container">
-    <div class="sidebar-container">
+    <div class="sidebar-container" style="--topbar-height: {$rukaConfig.ui.topbar.height};">
       <SideBar/>
     </div>
     <div class="filelist-container">
@@ -35,22 +36,15 @@
 
   .sidebar-container {
     display: flex;
-    justify-content: center;
-    justify-self: center;
-    /*border remove top and else : border: var(--main-color) 1px solid; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     border-left: var(--main-color) 1px solid;
     border-right: var(--main-color) 1px solid;
     border-bottom: var(--main-color) 1px solid;
 
-    height: 92.4vh;
     width: 105px;
+    height: calc(100vh - var(--topbar-height) - 1px);
   }
-
-  /*.logo.vite:hover {*/
-  /*  filter: drop-shadow(0 0 2em #747bff);*/
-  /*}*/
-
-  /*.logo.svelte:hover {*/
-  /*  filter: drop-shadow(0 0 2em #ff3e00);*/
-  /*}*/
 </style>
