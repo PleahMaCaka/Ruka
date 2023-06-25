@@ -1,7 +1,6 @@
 <script lang="ts">
   import TopBar from "./lib/components/TopBar/TopBar.svelte"
   import SideBar from "./lib/components/SideBar/SideBar.svelte"
-  import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte"
   import rukaIcon from "./static/Ruka.png"
   import { colorPlate as color } from "./lib/stores/ColorPlate"
   import { rukaConfig } from "./lib/stores/ConfigStore"
@@ -11,7 +10,7 @@
   import Settings from "./lib/components/Pages/Settings.svelte";
   import PageError from "./lib/components/Pages/PageError.svelte";
 
-  let {page} = $pageStore
+  let page = $pageStore.page
 </script>
 
 <svelte:head>
@@ -25,14 +24,13 @@
     <div class="sidebar-container" style="--topbar-height: {$rukaConfig.ui.topbar.height};">
       <SideBar/>
     </div>
-    {#if page === Page.FileExplorer}
+    {#if $pageStore.page === Page.FileExplorer}
       <FileExplorer/>
-    {:else if page === Page.Settings}
+    {:else if $pageStore.page === Page.Settings}
       <Settings/>
     {:else}
       <PageError/>
     {/if}
-    <ContextMenu/>
   </div>
 </main>
 

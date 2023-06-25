@@ -1,19 +1,27 @@
 <script lang="ts">
   import settingIcon from '../../../static/sidebar/setting.svg'
   import type { CssSize } from "../../../typescript/types/StyleTypes";
+  import { pageStore } from "../../stores/PageStore";
+  import { Page } from "../../../typescript/enums/Page";
 
   const btnSize: CssSize = "40px"
+
+  function toggleSettingPage() {
+    if ($pageStore.page === Page.Settings) $pageStore.page = Page.FileExplorer
+    else $pageStore.page = Page.Settings
+  }
 </script>
 
-<div class="setting-container" style="--setting-btn-size: {btnSize}">
-  <div class="setting-btn">
-    <div id="icon-bigger-anim" class="center-holder">
-      <img
-        alt="Settings"
-        src={settingIcon}
-        class="setting-icon center-holder"
-      />
-    </div>
+<div class="setting-container"
+     style="--setting-btn-size: {btnSize}"
+     on:click={toggleSettingPage}
+>
+  <div id="icon-bigger-anim" class="center-holder">
+    <img
+      alt="Settings"
+      src={settingIcon}
+      class="setting-icon center-holder"
+    />
   </div>
 </div>
 
@@ -68,5 +76,7 @@
     width: var(--setting-btn-size);
     height: var(--setting-btn-size);
     border-radius: 50%;
+
+    cursor: pointer;
   }
 </style>
