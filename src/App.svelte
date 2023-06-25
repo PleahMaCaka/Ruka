@@ -3,8 +3,15 @@
   import SideBar from "./lib/components/SideBar/SideBar.svelte"
   import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte"
   import rukaIcon from "./static/Ruka.png"
-  import { colorPlate as color } from "./lib/stores/ColorPlate";
-  import { rukaConfig } from "./lib/stores/ConfigStore";
+  import { colorPlate as color } from "./lib/stores/ColorPlate"
+  import { rukaConfig } from "./lib/stores/ConfigStore"
+  import { pageStore } from "./lib/stores/PageStore"
+  import { Page } from "./typescript/enums/Page";
+  import FileExplorer from "./lib/components/Pages/FileExplorer.svelte";
+  import Settings from "./lib/components/Pages/Settings.svelte";
+  import PageError from "./lib/components/Pages/PageError.svelte";
+
+  let {page} = $pageStore
 </script>
 
 <svelte:head>
@@ -18,11 +25,13 @@
     <div class="sidebar-container" style="--topbar-height: {$rukaConfig.ui.topbar.height};">
       <SideBar/>
     </div>
-    <div class="filelist-container">
-      <div>
-        Files
-      </div>
-    </div>
+    {#if page === Page.FileExplorer}
+      <FileExplorer/>
+    {:else if page === Page.Settings}
+      <Settings/>
+    {:else}
+      <PageError/>
+    {/if}
     <ContextMenu/>
   </div>
 </main>
