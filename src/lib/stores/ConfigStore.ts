@@ -5,6 +5,9 @@ export const defaultConfig: IRukaConfig = {
     ui: {
         topbar: {
             marginHeight: "40px"
+        },
+        color: {
+            main: "rgba(221, 187, 221, 0.45)",
         }
     }
 }
