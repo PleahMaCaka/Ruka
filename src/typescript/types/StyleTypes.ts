@@ -16,4 +16,7 @@ export type CssUnit =
     | "ch"
     | "fr"
 
+/**
+ * @description A string that represents a css size value
+ */
 export type CssSize = `${number}${CssUnit}`
