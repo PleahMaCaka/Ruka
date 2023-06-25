@@ -1,7 +1,8 @@
 <script lang="ts">
   import settingIcon from '../../../static/sidebar/setting.svg'
+  import type { CssSize } from "../../../typescript/types/StyleTypes";
 
-  const btnSize = "40px"
+  const btnSize: CssSize = "40px"
 </script>
 
 <div class="setting-container" style="--setting-btn-size: {btnSize}">

@@ -1,9 +1,9 @@
-import type { cssSize } from "../types/StyleTypes";
+import type { CssSize } from "../types/StyleTypes";
 
 export interface IRukaConfig {
     ui?: {
         topbar?: {
-            height?: cssSize
+            height?: CssSize
         }
     }
 }

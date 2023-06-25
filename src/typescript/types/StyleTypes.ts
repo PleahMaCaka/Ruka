@@ -1,4 +1,4 @@
-export type cssUnit =
+export type CssUnit =
     "px"
     | "em"
     | "rem"
@@ -16,4 +16,4 @@ export type cssUnit =
     | "ch"
     | "fr"
 
-export type cssSize = `${number}${cssUnit}`
+export type CssSize = `${number}${CssUnit}`
