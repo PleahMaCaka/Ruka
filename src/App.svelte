@@ -21,7 +21,7 @@
 <main class="app-container" style="--main-color: {color.main};">
   <TopBar/>
   <div class="content-container">
-    <div class="sidebar-container" style="--topbar-height: {$rukaConfig.ui.topbar.height};">
+    <div class="sidebar-container" style="--topbar-height: {$rukaConfig.ui.topbar.marginHeight};">
       <SideBar/>
     </div>
     {#if $pageStore.page === Page.FileExplorer}

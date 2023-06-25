@@ -4,7 +4,7 @@ import type { IRukaConfig } from "../../typescript/interfaces/IRukaConfig";
 export const defaultConfig: IRukaConfig = {
     ui: {
         topbar: {
-            height: "40px"
+            marginHeight: "40px"
         }
     }
 }

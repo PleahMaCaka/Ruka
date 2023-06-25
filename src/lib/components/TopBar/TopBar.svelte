@@ -8,7 +8,7 @@
 <div
   data-tauri-drag-region
   class="top-bar input-drag-region"
-  style="--topbar-size: {$rukaConfig.ui.topbar.height}"
+  style="--topbar-size: {$rukaConfig.ui.topbar.marginHeight}"
 >
   <TopBarButtons/>
   <TopBarInput/>
