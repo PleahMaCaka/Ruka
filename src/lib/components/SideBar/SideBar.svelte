@@ -1,8 +1,8 @@
 <script lang="ts">
-  import DivisionLine from "./DivisionLine.svelte";
-  import AddSideBarItemBtn from "./AddSideBarItemBtn.svelte";
-  import SideBarItem from "./SideBarItem.svelte";
-  import SettingButton from "./SideBarSettingBtn.svelte";
+  import DivisionLine from "./SideBarDivider.svelte"
+  import AddSideBarItemBtn from "./SideBarAddItemBtn.svelte"
+  import SideBarItem from "./SideBarItem.svelte"
+  import SettingButton from "./SideBarSettingBtn.svelte"
 </script>
 
 <div class="sidebar-contents">

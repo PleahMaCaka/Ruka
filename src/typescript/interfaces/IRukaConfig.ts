@@ -1,5 +1,5 @@
-import type { CssSize } from "../types/StyleTypes";
-import type { CssColor } from "../types/ColorTypes";
+import type { CssSize } from "../types/StyleTypes"
+import type { CssColor } from "../types/ColorTypes"
 
 export interface IRukaConfig {
     ui?: IRukaUIConfig

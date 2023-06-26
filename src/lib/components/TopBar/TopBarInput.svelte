@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { rukaState } from "../../stores/StateStore";
-  import { rukaConfig } from "../../stores/ConfigStore";
+  import { rukaState } from "../../stores/StateStore"
+  import { rukaConfig } from "../../stores/ConfigStore"
 </script>
 
 <div class="address-container" data-tauri-drag-region>
@@ -24,6 +24,9 @@
     font-size: 14px;
     outline: none;
     padding: 0 12px;
+
+    transition: 0.2s;
+    animation: 0.2s ease-in-out;
   }
 
   .address-input:hover, .address-input:focus {

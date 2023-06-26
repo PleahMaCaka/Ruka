@@ -1,8 +1,8 @@
 <script lang="ts">
   import settingIcon from '../../../static/sidebar/setting.svg'
-  import type { CssSize } from "../../../typescript/types/StyleTypes";
-  import { pageStore } from "../../stores/PageStore";
-  import { Page } from "../../../typescript/enums/Page";
+  import type { CssSize } from "../../../typescript/types/StyleTypes"
+  import { pageStore } from "../../stores/PageStore"
+  import { Page } from "../../../typescript/enums/Page"
 
   const btnSize: CssSize = "40px"
 

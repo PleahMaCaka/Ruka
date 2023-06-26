@@ -2,7 +2,7 @@
   import TopBarButtons from "./TopBarButtons.svelte"
   import TopBarInput from "./TopBarInput.svelte"
   import WindowControlButtons from "./TopBarWindowControl.svelte"
-  import { rukaConfig } from "../../stores/ConfigStore";
+  import { rukaConfig } from "../../stores/ConfigStore"
 </script>
 
 <div

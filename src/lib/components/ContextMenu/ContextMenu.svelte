@@ -1,21 +1,7 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte'
 
-  let contextmenu
-
-  function showContextMenu(event) {
-    event.preventDefault()
-    contextmenu.style.left = event.pageX + 'px'
-    contextmenu.style.top = event.pageY + 'px'
-    contextmenu.style.display = 'block'
-  }
-
-  function hideContextMenu() {
-    contextmenu.style.display = 'none'
-    // setTimeout(() => {
-    //   contextmenu.style.display = 'none'
-    // }, 130) // 0.13s
-  }
+  let contextmenu: HTMLElement
 
   onMount(() => {
     contextmenu = document.getElementById('contextmenu')
@@ -28,6 +14,19 @@
     document.removeEventListener('contextmenu', showContextMenu)
     document.removeEventListener('click', hideContextMenu)
   })
+
+  function showContextMenu(event) {
+    event.preventDefault()
+    contextmenu.style.left = event.pageX + 'px'
+    contextmenu.style.top = event.pageY + 'px'
+    contextmenu.style.display = 'block'
+  }
+
+  function hideContextMenu() {
+    setTimeout(() => {
+      contextmenu.style.display = 'none'
+    }, 0) // 130 = 0.13s
+  }
 </script>
 
 <div id="contextmenu" class="contextmenu">
@@ -37,8 +36,8 @@
 <style>
   #contextmenu {
     position: fixed;
-    z-index: 100;
     display: none;
+    z-index: 100;
 
     width: 150px;
     height: 170px;

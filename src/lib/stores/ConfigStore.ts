@@ -1,5 +1,5 @@
-import {writable} from "svelte/store";
-import type {IRukaConfig, IRukaUIConfig} from "../../typescript/interfaces/IRukaConfig";
+import { writable } from "svelte/store"
+import type { IRukaConfig, IRukaUIConfig } from "../../typescript/interfaces/IRukaConfig"
 
 export const defaultUIConfig: IRukaUIConfig = {
     topbar: {

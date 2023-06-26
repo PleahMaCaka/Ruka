@@ -1,4 +1,4 @@
-import type { NotInited } from "../types/NotInited";
+import type { NotInited } from "../types/NotInited"
 
 export interface IRukaState {
     /**

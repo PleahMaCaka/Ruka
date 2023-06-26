@@ -1,15 +1,22 @@
 <script lang="ts">
-  import Divider from "./Settings/Divider.svelte";
-  import { rukaConfig } from "../../stores/ConfigStore";
+  import Divider from "./Settings/Divider.svelte"
+  import { rukaConfig } from "../../stores/ConfigStore"
   import resetIcon from "../../../static/page/settings/corner-down-left.svg"
-  import type { CssSize } from "../../../typescript/types/StyleTypes";
+  import type { CssSize } from "../../../typescript/types/StyleTypes"
+  import { onMount } from "svelte";
 
-  let inputWidth: number = 0
+  let inputWidth = $rukaConfig.ui.topbar.width.slice(0, -2)
 
   function applyInputWidth() {
-    const size: string = `${inputWidth}vw`
+    const size = `${inputWidth}vw`
     $rukaConfig.ui.topbar.width = size as CssSize
+    console.log(`Applied width: ${size}`)
   }
+
+  onMount(() => {
+    (document.getElementsByClassName("range-option")[0] as HTMLInputElement).value
+      = inputWidth
+  })
 </script>
 
 <div class="setting-container">
@@ -17,21 +24,21 @@
 
   <h3 class="title">Command Palette</h3>
 
-  <div class="setting-box"
-       style="--main-color: {$rukaConfig.ui.color.main}"
-  >
+  <div class="setting-box" style="--main-color: {$rukaConfig.ui.color.main}">
     <div class="setting-title-box">
       <h4 class="sub-title">Width</h4>
       <h5 class="description">Width of the command palette</h5>
     </div>
-    <h5 class="current-value">{$rukaConfig.ui.topbar.width}</h5>
-    <input class="range-option" type="range" min="50" max="70" step="1"
-           bind:value={inputWidth}
-           on:change={applyInputWidth}
+    <h5 class="current-value">{inputWidth}vw</h5>
+    <input
+      type="range" min="50" max="70" step="1"
+      class="range-option"
+      bind:value={inputWidth}
+      on:change={applyInputWidth}
     />
 
     <button class="option-reset">
-      <img class="option-reset-icon" src={resetIcon} alt="Rest">
+      <img class="option-reset-icon" src={resetIcon} alt="Reset"/>
     </button>
   </div>
   <Divider/>
@@ -52,7 +59,6 @@
     align-items: center;
     justify-content: space-around;
     margin: 4px;
-
     animation: fadeIn 0.3s ease-in-out;
   }
 
@@ -70,10 +76,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
     border-left: 1px solid #ccc;
     padding-left: 10px;
-
     margin: 0 0 10px 0;
   }
 
@@ -94,7 +98,6 @@
   .option-reset-icon {
     width: 100%;
     height: 100%;
-
     /*make center*/
     position: relative;
     left: 50%;
@@ -108,6 +111,12 @@
     padding: 0;
     align-self: center;
     color: var(--main-color);
+
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    transition: 0.2s;
+    animation: fadeIn 0.3s ease-in-out;
   }
 
   .title {
@@ -142,11 +151,9 @@
     margin: 0;
     padding: 10px;
     border-bottom: 1px solid #ccc;
-
     letter-spacing: 0.3rem;
     font-size: 1.5rem;
     font-weight: bold;
-
     color: #8286ff;
     animation: fadeIn 0.3s ease-in-out;
   }

@@ -4,10 +4,11 @@
   import rukaIcon from "./static/Ruka.png"
   import { rukaConfig } from "./lib/stores/ConfigStore"
   import { pageStore } from "./lib/stores/PageStore"
-  import { Page } from "./typescript/enums/Page";
-  import FileExplorer from "./lib/components/Pages/FileExplorer.svelte";
-  import Settings from "./lib/components/Pages/Settings.svelte";
-  import PageError from "./lib/components/Pages/PageError.svelte";
+  import { Page } from "./typescript/enums/Page"
+  import FileExplorer from "./lib/components/Pages/FileExplorer.svelte"
+  import Settings from "./lib/components/Pages/Settings.svelte"
+  import PageError from "./lib/components/Pages/PageError.svelte"
+  import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte";
 </script>
 
 <svelte:head>
@@ -15,10 +16,17 @@
   <link rel="icon" type="image/png" href="{rukaIcon}"/>
 </svelte:head>
 
-<main class="app-container" style="--main-color: {$rukaConfig.ui.color.main};">
+<main
+  class="app-container"
+  style="--main-color: {$rukaConfig.ui.color.main};"
+>
+  <ContextMenu/>
   <TopBar/>
   <div class="content-container">
-    <div class="sidebar-container" style="--topbar-height: {$rukaConfig.ui.topbar.marginHeight};">
+    <div
+      class="sidebar-container"
+      style="--topbar-height: {$rukaConfig.ui.topbar.marginHeight};"
+    >
       <SideBar/>
     </div>
     {#if $pageStore.page === Page.FileExplorer}
