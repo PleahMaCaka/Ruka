@@ -10,11 +10,18 @@
     if ($pageStore.page === Page.Settings) $pageStore.page = Page.FileExplorer
     else $pageStore.page = Page.Settings
   }
+
+  function handleKeyPress(event: KeyboardEvent) {
+    if (event.key === "Enter" || event.key === " ")
+      toggleSettingPage()
+  }
 </script>
 
+<!-- Key press is not necessary, but implemented to remove warning -->
 <div class="setting-container"
      style="--setting-btn-size: {btnSize}"
      on:click={toggleSettingPage}
+     on:keypress={handleKeyPress}
 >
   <div id="icon-bigger-anim" class="center-holder">
     <img
