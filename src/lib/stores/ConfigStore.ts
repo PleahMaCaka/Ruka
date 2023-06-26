@@ -1,15 +1,18 @@
-import { writable } from "svelte/store";
-import type { IRukaConfig } from "../../typescript/interfaces/IRukaConfig";
+import {writable} from "svelte/store";
+import type {IRukaConfig, IRukaUIConfig} from "../../typescript/interfaces/IRukaConfig";
+
+export const defaultUIConfig: IRukaUIConfig = {
+    topbar: {
+        marginHeight: "40px",
+        width: "70vw"
+    },
+    color: {
+        main: "rgba(221, 187, 221, 0.45)",
+    }
+}
 
 export const defaultConfig: IRukaConfig = {
-    ui: {
-        topbar: {
-            marginHeight: "40px"
-        },
-        color: {
-            main: "rgba(221, 187, 221, 0.45)",
-        }
-    }
+    ui: defaultUIConfig,
 }
 
 /**
@@ -17,7 +20,7 @@ export const defaultConfig: IRukaConfig = {
  * @param config
  * @returns {IRukaConfig} merged config
  */
-function overrideDefaultConfig(config: IRukaConfig): IRukaConfig {
+function applyDefaultConfig(config: IRukaConfig): IRukaConfig {
     const mergedConfig = {
         ...defaultConfig,
         ...config

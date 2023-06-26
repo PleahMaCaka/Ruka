@@ -1,9 +1,11 @@
 <script lang="ts">
   import { rukaState } from "../../stores/StateStore";
+  import { rukaConfig } from "../../stores/ConfigStore";
 </script>
 
 <div class="address-container" data-tauri-drag-region>
   <input
+    style="--input-width: {$rukaConfig.ui.topbar.width}"
     class="address-input"
     bind:value={$rukaState.currentInput}
     on:submit={$rukaState.submittedInput}
@@ -12,7 +14,7 @@
 
 <style>
   .address-input {
-    width: 70vw;
+    width: var(--input-width);
     height: 24px;
     border: rgba(169, 169, 169, 0.1) 1px solid;
     border-radius: 5px;
