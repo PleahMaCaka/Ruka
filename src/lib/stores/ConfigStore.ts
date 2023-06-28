@@ -4,7 +4,7 @@ import type { IRukaConfig, IRukaUIConfig } from "../../typescript/interfaces/IRu
 export const defaultUIConfig: IRukaUIConfig = {
     topbar: {
         marginHeight: "40px",
-        width: "70vw"
+        width: "65vw"
     },
     color: {
         main: "rgba(221, 187, 221, 0.45)",
