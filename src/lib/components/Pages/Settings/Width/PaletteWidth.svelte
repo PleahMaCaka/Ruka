@@ -2,8 +2,8 @@
   import { rukaConfig } from "../../../../stores/ConfigStore"
   import type { CssSize } from "../../../../../typescript/types/StyleTypes"
   import { onMount } from "svelte"
-  import OptionContainer from "../OptionContainer.svelte"
-  import OptionBox from "../OptionBox.svelte"
+  import OptionContainer from "../Frames/OptionContainer.svelte"
+  import OptionBox from "../Frames/OptionBox.svelte"
   import resetIcon from "../../../../../static/page/settings/corner-down-left.svg"
 
   let inputWidth = $rukaConfig.ui.topbar.width.slice(0, -2)
