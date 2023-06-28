@@ -18,7 +18,7 @@
 </script>
 
 <!-- Key press is not necessary, but implemented to remove warning -->
-<div class="setting-container"
+<div class="setting-btn-container"
      style="--setting-btn-size: {btnSize}"
      on:click={toggleSettingPage}
      on:keypress={handleKeyPress}
@@ -75,7 +75,7 @@
     }
   }
 
-  .setting-container {
+  .setting-btn-container {
     position: fixed;
     bottom: -2.5%;
     left: -1.5%;
