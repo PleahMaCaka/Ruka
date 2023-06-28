@@ -50,11 +50,27 @@
     transition: 0.13s;
     filter: drop-shadow(0 0 1em rgba(221, 187, 221, 0.5));
 
-    animation: spin 1s linear infinite;
+    animation: spin 2.5s linear infinite;
   }
 
   #icon-bigger-anim:hover {
-    animation: bigger 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
+    animation: bigger 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+  }
+
+  /* when click -> size feedback */
+  #icon-bigger-anim:active {
+    animation: bigger-reverse 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes bigger-reverse {
+    0% {
+      transform: translate(-50%, -50%) scale(1.4);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 
   @keyframes spin {
@@ -77,8 +93,8 @@
 
   .setting-btn-container {
     position: fixed;
-    bottom: -2.5%;
-    left: -1.5%;
+    bottom: -3.4%;
+    left: -1.9%;
     background-color: rgba(221, 187, 221, 0.25);
     width: var(--setting-btn-size);
     height: var(--setting-btn-size);
