@@ -2,13 +2,13 @@
   import TopBar from "./lib/components/TopBar/TopBar.svelte"
   import SideBar from "./lib/components/SideBar/SideBar.svelte"
   import rukaIcon from "./static/Ruka.png"
-  import { rukaConfig } from "./lib/stores/ConfigStore"
-  import { pageStore } from "./lib/stores/PageStore"
-  import { Page } from "./typescript/enums/Page"
+  import { rukaConfig } from "./lib/stores/RukaConfig"
+  import { RukaPage } from "./typescript/enums/RukaPage"
   import FileExplorer from "./lib/components/Pages/FileExplorer.svelte"
   import Settings from "./lib/components/Pages/Settings.svelte"
   import PageError from "./lib/components/Pages/PageError.svelte"
-  import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte";
+  import ContextMenu from "./lib/components/ContextMenu/ContextMenu.svelte"
+  import { rukaState } from "./lib/stores/RukaState"
 </script>
 
 <svelte:head>
@@ -29,9 +29,9 @@
     >
       <SideBar/>
     </div>
-    {#if $pageStore.page === Page.FileExplorer}
+    {#if $rukaState.page === RukaPage.FileExplorer}
       <FileExplorer/>
-    {:else if $pageStore.page === Page.Settings}
+    {:else if $rukaState.page === RukaPage.Settings}
       <Settings/>
     {:else}
       <PageError/>

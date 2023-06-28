@@ -1,4 +1,4 @@
-export enum Page {
+export enum RukaPage {
     FileExplorer,
     Settings
 }

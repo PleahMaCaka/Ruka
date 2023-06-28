@@ -7,7 +7,7 @@
 
 <div class="sidebar-contents">
   <!--  <SideBarItem/>-->
-  <SideBarItem/>
+  <SideBarItem icon="🏠" name="User"/>
   <DivisionLine/>
   <!--  Adding SideBar Item-->
   <AddSideBarItemBtn/>
@@ -22,5 +22,7 @@
     justify-self: center;
     justify-items: center;
     align-items: center;
+
+    margin-top: 4px;
   }
 </style>

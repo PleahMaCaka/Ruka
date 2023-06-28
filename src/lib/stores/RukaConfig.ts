@@ -1,3 +1,5 @@
+// noinspection JSUnusedLocalSymbols
+
 import { writable } from "svelte/store"
 import type { IRukaConfig, IRukaUIConfig } from "../../typescript/interfaces/IRukaConfig"
 

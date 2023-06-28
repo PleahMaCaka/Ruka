@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { rukaState } from "../../stores/StateStore"
-  import { rukaConfig } from "../../stores/ConfigStore"
+  import { rukaState } from "../../stores/RukaState"
+  import { rukaConfig } from "../../stores/RukaConfig"
 </script>
 
 <div class="address-container" data-tauri-drag-region>

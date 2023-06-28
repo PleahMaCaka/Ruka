@@ -1,14 +1,14 @@
 <script lang="ts">
   import settingIcon from '../../../static/sidebar/setting.svg'
   import type { CssSize } from "../../../typescript/types/StyleTypes"
-  import { pageStore } from "../../stores/PageStore"
-  import { Page } from "../../../typescript/enums/Page"
+  import { RukaPage } from "../../../typescript/enums/RukaPage"
+  import { rukaState } from "../../stores/RukaState";
 
   const btnSize: CssSize = "40px"
 
   function toggleSettingPage() {
-    if ($pageStore.page === Page.Settings) $pageStore.page = Page.FileExplorer
-    else $pageStore.page = Page.Settings
+    if ($rukaState.page === RukaPage.Settings) $rukaState.page = RukaPage.FileExplorer
+    else $rukaState.page = RukaPage.Settings
   }
 
   function handleKeyPress(event: KeyboardEvent) {
