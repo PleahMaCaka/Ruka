@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { rukaConfig } from "../../../../stores/ConfigStore"
+  import { rukaConfig } from "../../../../stores/RukaConfig"
   import type { CssSize } from "../../../../../typescript/types/StyleTypes"
   import { onMount } from "svelte"
   import OptionContainer from "../Frames/OptionContainer.svelte"
@@ -23,12 +23,18 @@
   <OptionBox name="Width" description="Width of the command palette">
     <h5 class="option-value">{inputWidth}vw</h5>
     <input
-      type="range" min="50" max="70" step="1"
+      type="range" min="20" max="70" step="1"
       class="range-option"
       bind:value={inputWidth}
       on:change={applyInputWidth}
     />
-    <button class="option-reset">
+    <button
+      class="option-reset"
+      on:click={() => {
+        inputWidth = "65"
+        applyInputWidth()
+      }}
+    >
       <img class="option-reset-icon" src={resetIcon} alt="Reset"/>
     </button>
   </OptionBox>
